@@ -9,6 +9,12 @@ const now = new Date();
 const seconds = now.getSeconds();
 const secondsDegrees = ((seconds / 60)* 360) + 90;
 secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+//Fixing the secondhand glitch
+if(secondsDegrees === 90) {
+    secondHand.style.transition = 'none'
+} else {
+    secondHand.style.transition = ''
+}
 console.log(`The seconds are ${seconds}`);
 //Code for minute hand
 const minutes = now.getMinutes();
