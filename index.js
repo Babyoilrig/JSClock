@@ -20,6 +20,9 @@ const hours = now.getHours();
 console.log(`The hour is ${hours}`);
 const hourDegrees = ((hours / 12) * 360) + 90;
 hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+//Nesa angen adio if statement i neud yr dwylio symud yn smwth i 12
+//Ella addio rhywbath i newid y background?
 }
 
 setInterval(setDate, 1000);
